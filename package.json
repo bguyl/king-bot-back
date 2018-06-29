@@ -1,0 +1,42 @@
+{
+  "name": "king-bot-back",
+  "version": "0.1.0-alpha",
+  "description": "Backend for the Discord King Bot",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build && node dist/index.ts",
+    "watch": "webpack-cli --config .config/webpack.config.js  --watch",
+    "build": "webpack-cli --config .config/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p ./tsconfig.json -c ./tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bguyl/king-bot-back.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "api"
+  ],
+  "author": "Bastien Guyl <bastien@guyl.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bguyl/king-bot-back/issues"
+  },
+  "homepage": "https://github.com/bguyl/king-bot-back#readme",
+  "devDependencies": {
+    "@types/hapi": "^17.0.12",
+    "@types/node": "^10.5.1",
+    "ts-loader": "^4.4.1",
+    "tslint": "^5.10.0",
+    "tslint-loader": "^3.6.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "hapi": "^17.5.2"
+  }
+}
